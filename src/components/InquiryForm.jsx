@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Button from "./Button";
 
 function InquiryForm() {
   const [formData, setFormData] = useState({
@@ -29,8 +30,8 @@ function InquiryForm() {
   };
 
   return (
-    <div className="max-w-md mx-4 sm:mx-auto  p-6 bg-[#383e3e] dark:bg-[#f2f3f6] rounded-lg shadow-md my-16">
-      <h2 className="text-2xl font-semibold mb-4">Contact Us</h2>
+    <div className="max-w-md mx-4 sm:mx-auto  p-6 bg-[#ffeeac] rounded-lg shadow-md my-16">
+      <h2 className="text-2xl font-semibold  mb-4">Contact Us</h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-4 ">
           <label htmlFor="name" className="block text-gray-700 font-semibold">
@@ -48,7 +49,7 @@ function InquiryForm() {
           />
         </div>
         <div className="mb-4">
-          <label htmlFor="email" className="block text-gray-700 font-semibold">
+          <label htmlFor="email" className="block text-gray-700 font-semibold ">
             Email
           </label>
           <input
@@ -65,7 +66,7 @@ function InquiryForm() {
         <div className="mb-4">
           <label
             htmlFor="contact"
-            className="block text-gray-700 font-semibold"
+            className="block text-gray-700 font-semibold "
           >
             Contact no.
           </label>
@@ -83,7 +84,7 @@ function InquiryForm() {
         <div className="mb-4">
           <label
             htmlFor="message"
-            className="block text-gray-700 font-semibold"
+            className="block text-gray-700 font-semibold "
           >
             Message
           </label>
@@ -99,12 +100,13 @@ function InquiryForm() {
           ></textarea>
         </div>
         <div className="text-center">
-          <button
+          <Button
+            text="Submit"
+            className={
+              "bg-[#C31B5F] text-white px-4 py-2 rounded-md hover:bg-opacity-90 transition duration-150 ease-in-out"
+            }
             type="submit"
-            className="bg-[#C31B5F] text-white px-4 py-2 rounded-md hover:bg-opacity-90 transition duration-150 ease-in-out"
-          >
-            Submit
-          </button>
+          />
         </div>
       </form>
     </div>
