@@ -10,7 +10,7 @@ function HeroSection() {
         <div className="flex mb-2 animate-slideInLeft">
           <FaFacebook className="text-2xl text-[#4267B2]  cursor-pointer mr-5" />
           <FaInstagram
-            className="text-2xl   cursor-pointer mr-5 text-transparent bg-clip-text text-[#f3f4f6] rounded-md "
+            className="text-2xl   cursor-pointer mr-5  text-[#f3f4f6] rounded-md "
             style={{
               background:
                 "linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80)",
