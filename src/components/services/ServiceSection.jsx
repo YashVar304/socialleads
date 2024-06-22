@@ -55,7 +55,7 @@ function ServicesSection() {
   ];
 
   return (
-    <section className="md:py-16">
+    <section className="md:py-16  ">
       <div className=" w-full flex flex-col  ">
         <div className="ml-[5%] ">
           <h2 className="inline-block w-fit  text-transparent bg-clip-text bg-gradient-to-r from-[#c31b5f] to-[#fad02c]   text-3xl font-bold">

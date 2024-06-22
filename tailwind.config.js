@@ -7,23 +7,32 @@ export default {
   darkMode:'class',
   theme: {
     extend: {
-    
+      fontFamily: {
+        roboto : ['Roboto Condensed', 'sans-serif'],
+        Popins : ['Poppins', 'sans-serif'],
+        playwrite: ['Playwrite TZ', 'sans-serif']
+      },
+
       animation: {
-        fadeIn: 'fadeIn 1s ease-in-out',
-        slideInLeft: 'slideInLeft 1s ease-out forwards',
+        fadeInLeft: 'fadeInLeft 1s ease-out',
+        fadeInRight: 'fadeInRight 1s ease-out',
+        zoomIn: 'zoomIn 1s ease-out',
       },
       keyframes: {
-        fadeIn: {
-          '0%': { opacity: 0 },
-          '100%': { opacity: 1 },
-        },
-        slideInLeft: {
+        fadeInLeft: {
           '0%': { transform: 'translateX(-100%)', opacity: 0 },
           '100%': { transform: 'translateX(0)', opacity: 1 },
         },
+        fadeInRight: {
+          '0%': { transform: 'translateX(100%)', opacity: 0 },
+          '100%': { transform: 'translateX(0)', opacity: 1 },
+        },
+        zoomIn: {
+          '0%': { transform: 'scale(0)', opacity: 0 },
+          '100%': { transform: 'scale(1)', opacity: 1 },
+        },
       },
-
     },
   },
-  plugins: [],
+  plugins: [require('tailgrids/plugin')],
 }

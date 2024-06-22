@@ -14,23 +14,29 @@ import { HashLink } from "react-router-hash-link";
 
 function Header() {
   const navItems = [
-    { name: "Home", link: "/", status: true },
-    { name: "About", link: "/#video", status: true },
+    { name: "About", link: "/about", status: true },
+
     {
       name: "Services",
-      link: "/#services",
+      link: "/services",
+      status: true,
+    },
+    { name: "Portfolio", link: "/#testinomial", status: true },
+    {
+      name: "Resources",
+      link: "/resources",
       status: true,
       isDropdown: true,
       dropdownItems: [
-        { name: "Web Development", link: "/web-development" },
-        { name: "Designing", link: "/designing" },
-        { name: "Video Editing", link: "/video-editing" },
-        { name: "Social Media Management", link: "/social-media-management" },
-        { name: "Personal Branding", link: "/personal-branding" },
-        { name: "Lead Generation", link: "/lead-generation" },
+        { name: "Blog", link: "/blog" },
+        { name: "Case Studies", link: "/case-studies" },
+        { name: "Ebooks", link: "/ebooks" },
+        { name: "Webinars", link: "/webinars" },
+        { name: "Whitepapers", link: "/whitepapers" },
       ],
     },
-    { name: "Testimonials", link: "/#testinomial", status: true },
+    { name: "Blog", link: "/blog", status: true },
+
     { name: "Contact", link: "/#contact", status: true },
   ];
 
@@ -70,52 +76,42 @@ function Header() {
         <div>
           <img src={Logo} alt="Logo" className="h-20 w-44" />
         </div>
-        <nav className="flex items-center">
+        <nav className="flex lg:flex-row-reverse items-center font-Popins">
           <ul className="flex items-center justify-center">
             <li
-              className="inline-block md:px-6 py-2 text-2xl text-[#4c4c4c] dark:text-slate-400 rounded-full cursor-pointer"
+              className="inline-block md:px-6 py-2 text-2xl text-[#4c4c4c] dark:text-slate-400 rounded-full cursor-pointer mr-4"
               onClick={HandleTheme}
             >
               {darkMode ? <FaToggleOn /> : <FaToggleOff />}
             </li>
-            <li className="w-full flex justify-center items-center text-center px-4 md:px-6 py-2 text-md text-[#4c4c4c] dark:text-slate-400">
-              <FaPhoneAlt className=" mr-1" />
-              <a href="tel:+913000000000">+9181xxxxxxx9</a>
-            </li>
           </ul>
           <button
-            className="md:hidden text-2xl text-[#4c4c4c] dark:text-slate-400"
+            className="lg:hidden text-2xl text-[#4c4c4c] dark:text-slate-400"
             onClick={toggleMenu}
           >
             {isMenuOpen ? <FaTimes /> : <FaBars />}
           </button>
-          <ul className="hidden md:flex ml-auto items-center">
+          <ul className="hidden lg:flex ml-auto items-center">
             {navItems.map(
               (item) =>
                 item.status && (
                   <li
                     key={item.name}
-                    className="relative inline-block px-6 py-2 duration-500 hover:bg-[#FAD02C] dark:hover:text-white text-[#4c4c4c] dark:text-slate-400 rounded-full"
+                    className="relative inline-block px-3 duration-500 hover:text-[#FAD02C] dark:hover:text-[#fad02c] text-[#4c4c4c] dark:text-slate-400 rounded-full"
                     onMouseEnter={item.isDropdown ? handleDropdownEnter : null}
                     onMouseLeave={item.isDropdown ? handleDropdownLeave : null}
                   >
                     {item.isDropdown ? (
-                      <div className="flex items-center cursor-pointer">
-                        {item.name}{" "}
+                      <div className="flex items-center cursor-pointer text-lg">
+                        {item.name}
                         {isDropdownOpen ? (
-                          <RiArrowDropUpLine className="mt-0.5 text-3xl" />
+                          <RiArrowDropUpLine className=" text-3xl" />
                         ) : (
-                          <RiArrowDropDownLine className="mt-0.5 text-3xl" />
+                          <RiArrowDropDownLine className=" text-3xl" />
                         )}
                       </div>
                     ) : (
-                      <HashLink
-                        smooth
-                        to={item.link}
-                        className="active:bg-[#fad02c]"
-                      >
-                        {item.name}
-                      </HashLink>
+                      <a className=" text-lg">{item.name}</a>
                     )}
                     {isDropdownOpen && item.isDropdown && (
                       <div className="relative">
@@ -125,11 +121,9 @@ function Header() {
                             {item.dropdownItems.map((dropdownItem) => (
                               <li
                                 key={dropdownItem.name}
-                                className="px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-700"
+                                className="px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-700 text-black hover:text-[#fad02c] dark:text-white"
                               >
-                                <HashLink smooth to={dropdownItem.link}>
-                                  {dropdownItem.name}
-                                </HashLink>
+                                <a>{dropdownItem.name}</a>
                               </li>
                             ))}
                           </ul>
@@ -143,7 +137,7 @@ function Header() {
         </nav>
       </div>
       {isMenuOpen && (
-        <div className="md:hidden">
+        <div className="lg:hidden">
           <ul className="flex flex-col items-center py-4">
             {navItems.map(
               (item) =>
@@ -164,9 +158,7 @@ function Header() {
                         )}
                       </div>
                     ) : (
-                      <HashLink smooth to={item.link} className="block w-full">
-                        {item.name}
-                      </HashLink>
+                      <a className="block w-full">{item.name}</a>
                     )}
                     {isDropdownOpen && item.isDropdown && (
                       <div className="relative">
@@ -178,9 +170,7 @@ function Header() {
                                 key={dropdownItem.name}
                                 className="px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-700"
                               >
-                                <HashLink smooth to={dropdownItem.link}>
-                                  {dropdownItem.name}
-                                </HashLink>
+                                <a>{dropdownItem.name}</a>
                               </li>
                             ))}
                           </ul>

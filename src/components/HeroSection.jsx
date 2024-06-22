@@ -1,40 +1,70 @@
 import React from "react";
-import Profile from "../profile.png";
-import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa";
+import { FaRegCheckCircle, FaPlay, FaRegCalendarAlt } from "react-icons/fa";
 import Button from "./Button";
 
 function HeroSection() {
   return (
-    <section className="w-full flex justify-evenly flex-wrap-reverse  dark:bg-[#14081e] py-20">
-      <div className="flex flex-col justify-center mt-8 px-10 ">
-        <div className="flex mb-2 animate-slideInLeft">
-          <FaFacebook className="text-2xl text-[#4267B2]  cursor-pointer mr-5" />
-          <FaInstagram
-            className="text-2xl   cursor-pointer mr-5  text-[#f3f4f6] rounded-md "
-            style={{
-              background:
-                "linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80)",
-            }}
+    <section className="w-full overflow-hidden">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row-reverse">
+        <div className=" z-10 pt-11 lg:pt-3 mx-auto w-full lg:w-1/2 animate-fadeInRight">
+          <img
+            src="https://cdn.tailgrids.com/1.0/assets/images/hero/hero-image-01.png"
+            alt="hero"
+            className="w-full md:ml-auto h-screen-[1/2] px-2 md:h-screen-[2/3] object-cover"
           />
-          <FaTwitter className="text-2xl text-[#1DA1F2]  cursor-pointer mr-5" />
-          <FaLinkedin className="text-2xl text-[#0A66C2]  cursor-pointer mr-5" />
         </div>
-        <h1 className="font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl animate-slideInLeft text-transparent bg-gradient-to-r from-[#C31B5F] to-[#FAD02C] bg-clip-text">
-          SocialLeads
-        </h1>
-        <p className="text-justify max-w-md  text-sm md:text-lg lg:text-xl mt-3 text-[#4c4c4c] dark:text-gray-400 animate-slideInLeft ">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-          nec feugiat purus. Nullam euismod, metus in posuere ultricies, mi odio
-          tincidunt ex, non tincidunt magna nisl id odio.
-        </p>
-        <Button text="Get Started" className="mt-5 animate-slideInLeft" />
-      </div>
-      <div className="flex justify-center mt-10 ">
-        <img
-          src={Profile}
-          alt="Profile"
-          className="drop-shadow-2xl rounded-full h-70 w-80 lg:h-96 lg:w-96 object-cover animate-slideInLeft delay-2000 image-shadow "
-        />
+        <div className="py-4 px-2 md:ml-[8%] md:mb-[8%] w-full lg:w-1/2 flex flex-col animate-fadeInLeft">
+          <h1
+            className="font-Poppins text-4xl md:text-5xl lg:text-6xl py-3"
+            style={{ lineHeight: "0.80", letterSpacing: "0em" }}
+          >
+            <span className="text-[#c31b5f] font-extrabold">
+              SOCIAL
+              <br /> MEDIA
+            </span>
+            <br />
+            <span className="text-[#fad02c] font-extrabold">MARKETING</span>
+          </h1>
+          <p className="py-3">
+            <span className="text-md md:text-xl lg:text-2xl font-Poppins font-semibold dark:text-white">
+              FOR
+            </span>
+            <span className="font-playwrite text-xl md:text-2xl lg:text-4xl text-[#c31b5f]">
+              {" "}
+              Ambitious, Visionary, Decision Making, Growth-oriented, Audacious{" "}
+            </span>
+            <span className="text-md md:text-xl lg:text-2xl font-Poppins font-semibold dark:text-white">
+              FOUNDERS & COACHES
+            </span>
+          </p>
+          <ul className="py-3 ">
+            <li className="flex items-center text-sm md:text-md lg:text-xl font-Poppins dark:text-white">
+              <FaRegCheckCircle className="text-[#c31b5f] mr-3" /> Build your
+              SOCIAL presence.
+            </li>
+            <li className="flex items-center text-sm md:text-md lg:text-xl font-Poppins dark:text-white">
+              <FaRegCheckCircle className="text-[#c31b5f] mr-3" /> Increase your
+              ROI by generating LEADS.
+            </li>
+          </ul>
+          <div className="flex gap-5 flex-wrap py-3">
+            <Button className="animate-fadeInLeft">
+              <div className="flex text-sm md:text-md lg:text-lg items-center">
+                <FaPlay className="text-sm md:text-md lg:text-xl mr-3" />
+                Play our Story
+              </div>
+            </Button>
+            <Button className="animate-fadeInLeft">
+              <div className="flex text-sm md:text-md lg:text-lg items-center">
+                <FaRegCalendarAlt className="text-sm md:text-md lg:text-lg mr-3" />
+                Book SocialLEADS call
+              </div>
+            </Button>
+          </div>
+          <p className="text-xs md:text-sm lg:text-base font-Poppins text-[#A0A0A0] ml-3">
+            -Preksha Bothra, Personal Branding & Lead Gen Strategist
+          </p>
+        </div>
       </div>
     </section>
   );

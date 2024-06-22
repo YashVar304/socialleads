@@ -1,20 +1,27 @@
 import React from "react";
-import TestimonialsSection from "../components/testinomialSlider/TestinomialsSection";
 import HeroSection from "../components/HeroSection";
 import VideoSection from "../components/VideoSection";
-import ServicesSection from "../components/services/ServiceSection";
-import ProjectsSection from "../components/project/ProjectSection";
-import InquiryForm from "../components/InquiryForm";
+
+import Resources from "../components/Resources";
+import Business from "../components/business/Business";
+import FlockCliches from "../components/FlockClitches";
+import PortfolioSection from "../components/portfolio/PortfolioSection";
+import Brand from "../components/business/Brand";
+import BrandSection from "../components/BrandSection";
+import GuidedProcessSection from "../components/GuidedProcessSection";
 
 function Home() {
   return (
     <>
       <HeroSection />
+      <Resources />
+      <Business />
+      <FlockCliches />
       <VideoSection />
-      <TestimonialsSection />
-      <ServicesSection />
-      <ProjectsSection />
-      <InquiryForm />
+      <PortfolioSection />
+      <Brand />
+      <BrandSection />
+      <GuidedProcessSection />
     </>
   );
 }
