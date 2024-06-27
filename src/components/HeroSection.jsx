@@ -52,11 +52,11 @@ function HeroSection() {
             <br />
             <span className="text-[#fad02c] font-extrabold">MARKETING</span>
           </h1>
-          <p className="p-3  h-32">
-            <span className="text-md md:text-xl lg:text-2xl font-Poppins font-semibold dark:text-gray-400 inline-block mr-4 my-4">
+          <p className="p-3  ">
+            <span className="text-md md:text-xl lg:text-2xl font-Poppins font-semibold dark:text-gray-400 inline-block md:mr-4 md:my-4 mr-1 my-1">
               FOR
             </span>
-            <span className="font-playwrite text-xl md:text-2xl lg:text-4xl text-[#c31b5f] inline-block mb-4">
+            <span className="font-playwrite text-xl md:text-2xl lg:text-4xl text-[#c31b5f] inline-block md:mb-4">
               {" "}
               <TransitionGroup>
                 {showWord && (
