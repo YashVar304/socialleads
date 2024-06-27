@@ -6,15 +6,15 @@ const BrandSection = () => {
   return (
     <section className="flex flex-col md:flex-row items-center py-12 px-10 font-Popins w-full">
       <div className="max-w-3xl mx-auto text-center">
-        <h1 className="text-4xl font-bold mb-4">
+        <h1 className="text-4xl font-bold mb-4 dark:text-white">
           Stop slowing down the growth of your business
         </h1>
-        <p className="mb-6 text-gray-700">
+        <p className="mb-6 text-gray-700 dark:text-gray-6">
           Stop wasting hours of your time trying to build your business without
           a plan. Create your business with a solid brand strategy. We’ll show
           you how.
         </p>
-        <ul className="text-left text-lg list-none mb-8">
+        <ul className="text-left text-lg list-none mb-8 dark:text-white">
           <li className="flex items-start mb-2">
             <span className="text-[#c31b5f] mr-2">✔</span>
             Build an authentic & differentiated brand

@@ -53,7 +53,7 @@ function Header() {
     } else {
       document.querySelector("html").classList.add("dark");
       document.querySelector("html").classList.remove("light");
-      document.querySelector("body").style.backgroundColor = "#14081e";
+      document.querySelector("body").style.backgroundColor = "#121212";
     }
     dispatch(toggleTheme());
   };

@@ -6,11 +6,13 @@ const GuidedProcessSection = () => {
     <section className="flex flex-col items-center py-20 font-Popins px-3">
       <div className="text-center">
         <h1 className="text-3xl md:text-4xl lg:text-4xl font-bold mb-2">
-          <span className="text-black">BUILD</span>
+          <span className="text-black dark:text-white">BUILD</span>
           <span className="text-[#c31b5f] font-playwrite">Your</span>
-          <span className="text-black">PARADISE</span>
+          <span className="text-black dark:text-white">PARADISE</span>
         </h1>
-        <p className="text-2xl text-gray-700 mb-6">with our guided process</p>
+        <p className="text-2xl text-gray-700 mb-6 dark:text-gray-4">
+          with our guided process
+        </p>
         <div className="w-24 h-1 text-[#c31b5f] mx-auto mb-6"></div>
       </div>
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between">
